@@ -12,7 +12,10 @@
 
 <body>
     <nav>
-        <x-nav-link href="/" active="home">
+        {{-- <x-nav-link href="/" activate="home">
+            home
+        </x-nav-link> --}}
+        <x-nav-link href="/">
             home
         </x-nav-link>
         <x-nav-link href="/about">
