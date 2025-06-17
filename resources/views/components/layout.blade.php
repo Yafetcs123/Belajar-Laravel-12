@@ -24,16 +24,20 @@
             <nav aria-label="Global" class="hidden md:block">
                 <ul class="flex items-center gap-6 text-x">
                     <li>
-                        <x-nav-link class="text-gray-500 transition hover:text-gray-500/75" href="/"> Home </x-nav-link>
+                        <x-nav-link class="text-gray-500 transition hover:text-gray-500/75" href="/" :active="request()->is('/')"> Home
+                        </x-nav-link>
                     </li>
                     <li>
-                        <x-nav-link class="text-gray-500 transition hover:text-gray-500/75" href="/about"> About </x-nav-link>
+                        <x-nav-link class="text-gray-500 transition hover:text-gray-500/75" href="/about" :active="request()->is('about')"> About
+                        </x-nav-link>
                     </li>
                     <li>
-                        <x-nav-link class="text-gray-500 transition hover:text-gray-500/75" href="/contact"> Contact </x-nav-link>
+                        <x-nav-link class="text-gray-500 transition hover:text-gray-500/75" href="/contact" :active="request()->is('contact')"> Contact
+                        </x-nav-link>
                     </li>
                     <li>
-                        <x-nav-link class="text-gray-500 transition hover:text-gray-500/75" href="/data"> data </x-nav-link>
+                        <x-nav-link class="text-gray-500 transition hover:text-gray-500/75" href="/data" :active="request()->is('data')"> data
+                        </x-nav-link>
                     </li>
                 </ul>
             </nav>
