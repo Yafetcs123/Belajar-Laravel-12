@@ -2,17 +2,19 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=n, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    @vite('resources/css/app.css')
 </head>
 
 <body>
     <nav>
         <x-nav-link href="/" active="home">
             home
-        </x-nav-link >
+        </x-nav-link>
         <x-nav-link href="/about">
             about
         </x-nav-link>
