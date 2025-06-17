@@ -12,9 +12,9 @@ Route::get('/about', function () {
 
 Route::get('/data', function () {
     $data = [
-        ['nama'=>'Budi', 'umur'=>20, 'status'=>'sehat', 'id'=>'001'],
-        ['nama'=>'Putra', 'umur'=>21, 'status'=>'sehat', 'id'=>'002'],
-        ['nama'=>'Citra', 'umur'=>21, 'status'=>'sehat', 'id'=>'003']
+        ['nama'=>'Budi', 'umur'=>20, 'status'=>'sehat', 'id'=>'001',  'Jurusan'=>'teknik mesin'],
+        ['nama'=>'Putra', 'umur'=>21, 'status'=>'sehat', 'id'=>'002', 'Jurusan'=>'teknik mesin'],
+        ['nama'=>'Citra', 'umur'=>21, 'status'=>'sehat', 'id'=>'003', 'Jurusan'=>'teknik informatika']
     ];
     return view('data.data',['data' => $data]);
 });

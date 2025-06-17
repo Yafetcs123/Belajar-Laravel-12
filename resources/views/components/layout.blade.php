@@ -22,7 +22,7 @@
 
         <div class="flex flex-1 items-center justify-end md:justify-between">
             <nav aria-label="Global" class="hidden md:block">
-                <ul class="flex items-center gap-6 text-sm">
+                <ul class="flex items-center gap-6 text-x">
                     <li>
                         <x-nav-link class="text-gray-500 transition hover:text-gray-500/75" href="/"> Home </x-nav-link>
                     </li>
@@ -65,10 +65,10 @@
 </header>
 
 <body>
-    <main>
+    <main class="py-10 px-10 md:px-25">
         {{ $slot }}
     </main>
-    <footer>
+    <footer class="py-10 px-10 md:px-25">
         Ini footer dari page <span>{{ $footer }}</span>
     </footer>
 </body>
