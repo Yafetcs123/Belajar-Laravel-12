@@ -9,6 +9,7 @@
                     <th class="px-3 py-2 whitespace-nowrap">Umur</th>
                     <th class="px-3 py-2 whitespace-nowrap">Status</th>
                     <th class="px-3 py-2 whitespace-nowrap">Nilai</th>
+                    <th class="px-3 py-2 whitespace-nowrap">Details</th>
                 </tr>
             </thead>
 
@@ -18,12 +19,18 @@
                 @foreach ($data as $n)
                     <tr class="*:text-gray-900 *:first:font-medium">
                         <td class="px-3 py-2 whitespace-nowrap"> <a href="{{ url('/data/' . $n['id']) }}">
-                                {{ $n['nama'] }} 
+                                {{ $n['nama'] }}
                             </a>
                         </td>
                         <td class="px-3 py-2 whitespace-nowrap">{{ $n['Jurusan'] }}</td>
                         <td class="px-3 py-2 whitespace-nowrap">{{ $n['umur'] }}</td>
                         <td class="px-3 py-2 whitespace-nowrap">{{ $n['status'] }}</td>
+                        <td class="px-3 py-2 whitespace-nowrap">{{ $n['nilai'] }}</td>
+                        <td class="px-3 py-2 whitespace-nowrap">
+                            <a href="/data/{{ $n['id'] }}" class="text-teal-500 font-bold hover:opacity-50">
+                                Views details
+                            </a>
+                        </td>
                         </a>
                     </tr>
                 @endforeach

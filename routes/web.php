@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\siswa;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,16 +11,13 @@ Route::get('/about', function () {
 });
 
 Route::get('/data', function () {
-    $data = [
-        ['nama'=>'Budi', 'umur'=>20, 'status'=>'sehat', 'id'=>'001',  'Jurusan'=>'teknik mesin'],
-        ['nama'=>'Putra', 'umur'=>21, 'status'=>'sehat', 'id'=>'002', 'Jurusan'=>'teknik mesin'],
-        ['nama'=>'Citra', 'umur'=>21, 'status'=>'sehat', 'id'=>'003', 'Jurusan'=>'teknik informatika']
-    ];
+    $data = siswa::orderBy('nilai', 'desc')->get();
     return view('data.data',['data' => $data]);
 });
 
 Route::get('/data/{id}', function ($id) {
-    return view('data.show', ['id' => $id]);
+    $dat = Siswa::findOrFail($id); //
+    return view('data.show', ['dat' => $dat]);
 });
 
 Route::get('/contact', function () {
